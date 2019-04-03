@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/codes-printer/static/js/runtime~main.a424218e.js"
   },
   {
-    "revision": "509f16b76f2eba7584fe",
-    "url": "/codes-printer/static/js/main.509f16b7.chunk.js"
+    "revision": "c53c59ff8b17264a9c9b",
+    "url": "/codes-printer/static/js/main.c53c59ff.chunk.js"
   },
   {
     "revision": "d38aa31bbb5e37f0860a",
     "url": "/codes-printer/static/js/1.d38aa31b.chunk.js"
   },
   {
-    "revision": "509f16b76f2eba7584fe",
-    "url": "/codes-printer/static/css/main.634e36bb.chunk.css"
+    "revision": "c53c59ff8b17264a9c9b",
+    "url": "/codes-printer/static/css/main.f721b95f.chunk.css"
   },
   {
-    "revision": "5b860ccf2fc1dabbdb4a2ad990025112",
+    "revision": "37152bb78428b5e901c735885952aa3f",
     "url": "/codes-printer/index.html"
   }
 ];

@@ -1,5 +1,5 @@
 /* @import url('https://fonts.googleapis.com/css?family=Libre+Barcode+39+Extended+Text'); */
-/* @import url('https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text'); */
+@import url('https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text');
 
 * {
   margin: 0;
@@ -39,11 +39,13 @@ div:disabled, input:disabled, button:disabled {
   display: none;
 }
 
-.table {
+
+.codeTable {
   display: flex;
   margin: 10px 0;
   flex-wrap: wrap;
   justify-content: center;
+  /* width: 100%; */
 }
 
 p {
@@ -52,7 +54,7 @@ p {
   flex-grow: 0;
   flex-basis: 45%;
   justify-content: space-around;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   border-bottom: 1px solid black;
 }
@@ -63,9 +65,9 @@ span {
 }
 
 span.code {
-  font-family: "Code_39 2_5";
+  /* font-family: "Code_39 2_5"; */
   /* font-family: "Libre Barcode 39 Extended Text"; */
-  /* font-family: "Libre Barcode 39 Text"; */
-  font-size: 28px;
+  font-family: "Libre Barcode 39 Text";
+  font-size: 38px;
   padding: 2px;
 }

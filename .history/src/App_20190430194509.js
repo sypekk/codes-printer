@@ -81,7 +81,7 @@ class App extends Component {
     })
   }
 
-  //dodać liniowo CSS albo styled components zeby zrobić na kilka kolumn!!!!
+
   render() {
     return (
       <React.Fragment>

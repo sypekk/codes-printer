@@ -4,7 +4,7 @@ import Inputer from './Inputer';
 
 
 const Name = (props) => (
-  <div className='name'>{props.title}</div>
+  <div>{props.title}</div>
 )
 
 const Serial = (props) => (
@@ -81,7 +81,7 @@ class App extends Component {
     })
   }
 
-  //dodać liniowo CSS albo styled components zeby zrobić na kilka kolumn!!!!
+
   render() {
     return (
       <React.Fragment>

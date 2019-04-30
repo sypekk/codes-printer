@@ -3,31 +3,35 @@ import './App.css';
 import Inputer from './Inputer';
 
 
-const Name = (props) => (
-  <div className='name'>{props.title}</div>
-)
-
 const Serial = (props) => (
   <div className='code'>{props.serial}</div>
 )
 
 const Items = (props) => {
+  // <p>{props.index % 2 ? <span>{props.title}</span> : null}<span className="code">{`*${props.item.toUpperCase()}*`}</span></p>
 
-  return (
-    <>
-      {props.list.map(items => (
-        <>
-          <Name key={items.item} title={items.title} />
-          {items.serials.map(item => (
-            < Serial key={item} serial={item} />
-          )
-          )}
-        </>
-      )
-      )}
-    </>
+
+  props.lista.map(item => (
+    // <>
+    <div>{item.title}</div>
+    // {/* item.serials.map(item => <Serial serial={item} />) */}
+    // {/* <Serial serial={item.serials} /> */}
+    // </>
+
+  )
+
+    //     < div className = 'code' >
+    //       {`*${props.lista.map(item => item.title)}*`
+    // }
+    // { `*${props.lista.map(item => item.serials)}*` }
+    // {/* <span>{props.title}</span> */ }
+    // {/* <span className="code">{`*${props.item.toUpperCase()}*`}</span> */ }
+    //   </div >
   )
 }
+
+
+
 
 class App extends Component {
 
@@ -81,13 +85,34 @@ class App extends Component {
     })
   }
 
-  //dodać liniowo CSS albo styled components zeby zrobić na kilka kolumn!!!!
+
   render() {
+
+    // const codeItem = this.state.list.map(item => (
+    //   <>
+    //     <div>{item.title}</div>
+    //     {item.serials.map(item => <Serial serial={item} />)}
+    //   </>
+    // ))
+
+    // const titleItem = this.state.titleTable.map(item => (
+    //   <Title key={item.item} title={item.item} />
+    // ))
+
+
     return (
       <React.Fragment>
         {!this.state.off ? <Inputer {...this.state} changeTextFn={this.handleChangeText} hideFn={this.handleButtonHide} addFn={this.handleButtonAdd} titleFn={this.handleChangeTitle} /> : null}
         <div className='wrapper'>
-          {this.state.list.length > 0 && <Items list={this.state.list} />}
+          {/* <div className='test'>Test</div> */}
+          {/* {codeItem} */}
+          {this.state.list.length > 0 && <Items lista={this.state.list} />}
+          {/* <div className='itemName'>
+            {titleItem}
+          </div> */}
+          {/* <div className="codeTable">
+            {codeItem}
+          </div> */}
         </div>
       </React.Fragment >
     );

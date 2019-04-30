@@ -41,9 +41,19 @@ div:disabled, input:disabled, button:disabled {
 
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(auto-fill, 1fr);
 }
+
+
+.codeTable {
+  display: grid;
+  margin: 10px 0;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: coral;
+  text-align: center;
+}
+
 
 div.name {
   /* dispaly: flex; */

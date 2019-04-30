@@ -86,6 +86,7 @@ class App extends Component {
     return (
       <React.Fragment>
         {!this.state.off ? <Inputer {...this.state} changeTextFn={this.handleChangeText} hideFn={this.handleButtonHide} addFn={this.handleButtonAdd} titleFn={this.handleChangeTitle} /> : null}
+
         <div className='wrapper'>
           {this.state.list.length > 0 && <Items list={this.state.list} />}
         </div>

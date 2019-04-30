@@ -4,7 +4,7 @@ import Inputer from './Inputer';
 
 
 const Name = (props) => (
-  <div className='name'>{props.title}</div>
+  <div>{props.title}</div>
 )
 
 const Serial = (props) => (
@@ -13,6 +13,7 @@ const Serial = (props) => (
 
 const Items = (props) => {
 
+  // console.log(props.list[0].serials[0]);
   return (
     <>
       {props.list.map(items => (
@@ -25,9 +26,14 @@ const Items = (props) => {
         </>
       )
       )}
+      {/* {props.list.serials.map(item => (<Serial key={item.item} {...item} />))} */}
     </>
   )
 }
+
+
+
+
 
 class App extends Component {
 
@@ -81,13 +87,34 @@ class App extends Component {
     })
   }
 
-  //dodać liniowo CSS albo styled components zeby zrobić na kilka kolumn!!!!
+
   render() {
+
+    // const codeItem = this.state.list.map(item => (
+    //   <>
+    //     <div>{item.title}</div>
+    //     {item.serials.map(item => <Serial serial={item} />)}
+    //   </>
+    // ))
+
+    // const titleItem = this.state.titleTable.map(item => (
+    //   <Title key={item.item} title={item.item} />
+    // ))
+
+
     return (
       <React.Fragment>
         {!this.state.off ? <Inputer {...this.state} changeTextFn={this.handleChangeText} hideFn={this.handleButtonHide} addFn={this.handleButtonAdd} titleFn={this.handleChangeTitle} /> : null}
         <div className='wrapper'>
+          {/* <div className='test'>Test</div> */}
+          {/* {codeItem} */}
           {this.state.list.length > 0 && <Items list={this.state.list} />}
+          {/* <div className='itemName'>
+            {titleItem}
+          </div> */}
+          {/* <div className="codeTable">
+            {codeItem}
+          </div> */}
         </div>
       </React.Fragment >
     );

@@ -39,28 +39,35 @@ div:disabled, input:disabled, button:disabled {
   display: none;
 }
 
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(auto-fill, 1fr);
+
+.codeTable {
+  display: flex;
+  margin: 10px 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* width: 100%; */
 }
 
-div.name {
-  /* dispaly: flex; */
-  padding: 15px 5px 5px;
-  /* align-self: center; */
-  text-align: center;
+p {
+  display: flex;
+  padding: 5px;
+  flex-grow: 0;
+  flex-basis: 45%;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  align-items: center;
   border-bottom: 1px solid black;
 }
 
-div.code {
+span {
+  /* padding: 5px; */
+  font-size: 14px;
+}
+
+span.code {
   /* font-family: "Code_39 2_5"; */
   /* font-family: "Libre Barcode 39 Extended Text"; */
   font-family: "Libre Barcode 39 Text";
   font-size: 38px;
-  padding: 10px 5px 5px;
-  text-align: center;
-  border-bottom: 1px solid black;
+  padding: 2px;
 }
-
-

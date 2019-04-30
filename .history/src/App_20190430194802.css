@@ -45,6 +45,46 @@ div:disabled, input:disabled, button:disabled {
   grid-template-rows: repeat(auto-fill, 1fr);
 }
 
+
+.codeTable {
+  /* display: flex; */
+  display: grid;
+  margin: 10px 0;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: coral;
+  text-align: center;
+  /* flex-wrap: wrap; */
+  /* justify-content: center; */
+  /* width: 100%; */
+}
+
+.itemName {
+  display: block;
+}
+
+.test {
+  background-color: brown;
+  width: 33%;
+}
+
+p {
+  /* display: flex; */
+  /* display: grid; */
+
+  padding: 5px;
+  flex-grow: 0;
+  /* flex-basis: 45%; */
+  /* justify-content: space-around; */
+  /* flex-wrap: nowrap; */
+  /* align-items: center; */
+  border-bottom: 1px solid black;
+}
+
+span {
+  /* padding: 5px; */
+  font-size: 14px;
+}
+
 div.name {
   /* dispaly: flex; */
   padding: 15px 5px 5px;
@@ -58,7 +98,7 @@ div.code {
   /* font-family: "Libre Barcode 39 Extended Text"; */
   font-family: "Libre Barcode 39 Text";
   font-size: 38px;
-  padding: 10px 5px 5px;
+  padding: 5px;
   text-align: center;
   border-bottom: 1px solid black;
 }

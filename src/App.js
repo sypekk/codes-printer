@@ -3,15 +3,30 @@ import './App.css';
 import Inputer from './Inputer';
 
 
-const Item = (props) => (
+const Serial = (props) => (
+  <div className='code'>{props.serial}</div>
+)
+
+const Items = (props) => {
   // <p>{props.index % 2 ? <span>{props.title}</span> : null}<span className="code">{`*${props.item.toUpperCase()}*`}</span></p>
 
-  <div className='code'>
-    {`*${props.title}*`}
-    {/* <span>{props.title}</span> */}
-    {/* <span className="code">{`*${props.item.toUpperCase()}*`}</span> */}
-  </div>
-)
+  props.lista.map(item => (
+    <>
+      <div>{item.title}</div>
+      <Serial serial={item.serials} />
+    </>
+
+  )
+
+    //     < div className = 'code' >
+    //       {`*${props.lista.map(item => item.title)}*`
+    // }
+    // { `*${props.lista.map(item => item.serials)}*` }
+    // {/* <span>{props.title}</span> */ }
+    // {/* <span className="code">{`*${props.item.toUpperCase()}*`}</span> */ }
+    //   </div >
+  )
+}
 
 
 
@@ -71,11 +86,12 @@ class App extends Component {
 
   render() {
 
-    // const codeItem = this.state.list.map(item => {
-    //   // this.counter++;
-    //   return (<Item key={item.item} item={item.item} serials={item.item} />)
-    //   // return (<Item key={item.item} item={item.item} title={this.state.titleTable[item.indx]} />)
-    // })
+    const codeItem = this.state.list.map(item => (
+      <>
+        <div>{item.title}</div>
+        <Serial serial={item.serials} />
+      </>
+    ))
 
     // const titleItem = this.state.titleTable.map(item => (
     //   <Title key={item.item} title={item.item} />
@@ -88,7 +104,7 @@ class App extends Component {
         <div className='wrapper'>
           {/* <div className='test'>Test</div> */}
           {/* {codeItem} */}
-          {/* <Item lista={this.state.list} /> */}
+          {this.state.list.length > 0 && { codeItem }}
           {/* <div className='itemName'>
             {titleItem}
           </div> */}

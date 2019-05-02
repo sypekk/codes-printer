@@ -16,7 +16,7 @@ const Name = (props) => (
 )
 
 
-const Serial = (props) => {  
+const Serial = (props) => {
   const seriall = props.serial.replace('DUPACYCKI', ' ');
   return (
     <div className='code'>{`*${seriall}*`}</div>
@@ -49,59 +49,21 @@ class App extends Component {
     off: false,
     title: '',
     columns: 3,
+    exceptions: '',
   })
+
 
 
   handleButtonAdd = () => {
     const text = this.state.text;
     const title = this.state.title;
 
+    const exceptions = this.state.exceptions;
+    const zonk = exceptions.slice(0, exceptions.length - 1);
+    // console.log(zonk);
 
-
-
-    // let count = 0;
-    // let position = text.indexOf(exceptions);
-    // // let splitt= '';
-
-    // while (position !== -1) {
-    //   count++;
-    //   position = text.indexOf(exceptions, position + 1);
-    //   let splitt = text.split(' ');
-    //   splitt.forEach(items => {
-    //   const tmp = items.split('\t');
-    //   const item = {
-    //     title: title,
-    //     serials: tmp,
-    //   }
-    //   this.setState(prevState => ({
-    //     list: [...prevState.list, item]
-    //   }))
-    // })
-    // this.setState({
-    //   text: '',
-    //   title: '',
-    // })
-    // }
-
-    // console.log(count); // displays 4
-
-
-
-    // console.log(text);
-    // console.log(text.indexOf(exceptions));
-
-    const exceptions = /CCH /g;
-    // const changes = /! /gi;
-    const newString = text.replace(exceptions, 'CCHDUPACYCKI');
-    console.log(newString);
+    const newString = text.replace(new RegExp(exceptions, 'gi'), `${zonk}DUPACYCKI`);
     const split = newString.split(' ');
-    console.log(split);
-    // let split2 = '';
-    // split.forEach(item => {
-    //   split2 += item.replace(changes, ' ');
-    // })
-    // console.log(split2);
-    // const split2 = split.replace(changes, ' ');
     split.forEach(items => {
       const tmp = items.split('\t');
       const item = {
@@ -115,6 +77,12 @@ class App extends Component {
     this.setState({
       text: '',
       title: '',
+    })
+  }
+
+  handleChangeExceptions = (e) => {
+    this.setState({
+      exceptions: e.target.value,
     })
   }
 
@@ -143,10 +111,7 @@ class App extends Component {
     })
   }
 
-  //dodać liniowo CSS albo styled components zeby zrobić na kilka kolumn!!!!
   render() {
-
-    // const number = this.state.columns;
 
     return (
       <React.Fragment>
@@ -157,6 +122,7 @@ class App extends Component {
           addFn={this.handleButtonAdd}
           titleFn={this.handleChangeTitle}
           columsFn={this.handleChangeColums}
+          extceptionsFn={this.handleChangeExceptions}
         /> : null}
         <Containter number={this.state.columns}>
           {this.state.list.length > 0 && <Items list={this.state.list} />}

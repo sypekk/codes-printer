@@ -36,11 +36,12 @@ button {
 input {
   font-size: 15px;
   padding: 2px;
+  margin: 0px 10px;
 }
-
+/* 
 input:nth-child(1) {
   margin-right: 20px;
-}
+} */
 
 div:disabled {
   display: none;

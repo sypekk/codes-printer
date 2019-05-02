@@ -15,9 +15,13 @@ const Name = (props) => (
   <div className='name'>{props.title}</div>
 )
 
-const Serial = (props) => (
-  <div className='code'>{`*${props.serial}*`}</div>
-)
+
+const Serial = (props) => {  
+  const seriall = props.serial.replace('DUPACYCKI', ' ');
+  return (
+    <div className='code'>{`*${seriall}*`}</div>
+  )
+}
 
 const Items = (props) => {
 
@@ -52,7 +56,7 @@ class App extends Component {
     const text = this.state.text;
     const title = this.state.title;
 
-    const exceptions = 'CCH ';
+
 
 
     // let count = 0;
@@ -85,7 +89,19 @@ class App extends Component {
 
     // console.log(text);
     // console.log(text.indexOf(exceptions));
-    const split = text.split(' ');
+
+    const exceptions = /CCH /g;
+    // const changes = /! /gi;
+    const newString = text.replace(exceptions, 'CCHDUPACYCKI');
+    console.log(newString);
+    const split = newString.split(' ');
+    console.log(split);
+    // let split2 = '';
+    // split.forEach(item => {
+    //   split2 += item.replace(changes, ' ');
+    // })
+    // console.log(split2);
+    // const split2 = split.replace(changes, ' ');
     split.forEach(items => {
       const tmp = items.split('\t');
       const item = {

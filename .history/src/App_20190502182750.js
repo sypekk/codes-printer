@@ -17,9 +17,9 @@ const Name = (props) => (
 
 
 const Serial = (props) => {
-  const serial = props.serial.replace('ZONKZONKZONK', ' ');
+  const seriall = props.serial.replace('ZONKZONKZONK', ' ');
   return (
-    <div className='code'>{`*${serial}*`}</div>
+    <div className='code'>{`*${seriall}*`}</div>
   )
 }
 
@@ -91,7 +91,7 @@ class App extends Component {
 
   handleChange = (e) => {
     this.setState({
-      [e.target.name]: e.target.value,
+      [e.target.name] : e.target.value,
     })
   }
 

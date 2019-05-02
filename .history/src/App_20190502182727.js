@@ -17,9 +17,9 @@ const Name = (props) => (
 
 
 const Serial = (props) => {
-  const serial = props.serial.replace('ZONKZONKZONK', ' ');
+  const seriall = props.serial.replace('ZONKZONKZONK', ' ');
   return (
-    <div className='code'>{`*${serial}*`}</div>
+    <div className='code'>{`*${seriall}*`}</div>
   )
 }
 
@@ -83,15 +83,40 @@ class App extends Component {
     })
   }
 
+  handleChangeExceptions = (e) => {
+    this.setState({
+      exceptions: e.target.value,
+    })
+  }
+
+
   handleButtonHide = () => {
     this.setState({
       off: true,
     })
   }
 
+  handleChangeText = (e) => {
+    this.setState({
+      text: e.target.value,
+    })
+  }
+
+  handleChangeColums = (e) => {
+    this.setState({
+      columns: e.target.value,
+    })
+  }
+
+  handleChangeTitle = (e) => {
+    this.setState({
+      title: e.target.value,
+    })
+  }
+
   handleChange = (e) => {
     this.setState({
-      [e.target.name]: e.target.value,
+      [e.target.name] : e.target.value,
     })
   }
 

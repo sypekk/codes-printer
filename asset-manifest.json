@@ -1,13 +1,15 @@
 {
-  "main.css": "/codes-printer/static/css/main.f721b95f.chunk.css",
-  "main.js": "/codes-printer/static/js/main.c53c59ff.chunk.js",
-  "main.js.map": "/codes-printer/static/js/main.c53c59ff.chunk.js.map",
-  "static/js/1.d38aa31b.chunk.js": "/codes-printer/static/js/1.d38aa31b.chunk.js",
-  "static/js/1.d38aa31b.chunk.js.map": "/codes-printer/static/js/1.d38aa31b.chunk.js.map",
-  "runtime~main.js": "/codes-printer/static/js/runtime~main.a424218e.js",
-  "runtime~main.js.map": "/codes-printer/static/js/runtime~main.a424218e.js.map",
-  "static/css/main.f721b95f.chunk.css.map": "/codes-printer/static/css/main.f721b95f.chunk.css.map",
-  "index.html": "/codes-printer/index.html",
-  "precache-manifest.f33bc2ebdd7244e8c9ea9aa43c70848e.js": "/codes-printer/precache-manifest.f33bc2ebdd7244e8c9ea9aa43c70848e.js",
-  "service-worker.js": "/codes-printer/service-worker.js"
+  "files": {
+    "main.css": "/codes-printer/static/css/main.ac66f545.chunk.css",
+    "main.js": "/codes-printer/static/js/main.ac289928.chunk.js",
+    "main.js.map": "/codes-printer/static/js/main.ac289928.chunk.js.map",
+    "runtime~main.js": "/codes-printer/static/js/runtime~main.f8734348.js",
+    "runtime~main.js.map": "/codes-printer/static/js/runtime~main.f8734348.js.map",
+    "static/js/2.4989e907.chunk.js": "/codes-printer/static/js/2.4989e907.chunk.js",
+    "static/js/2.4989e907.chunk.js.map": "/codes-printer/static/js/2.4989e907.chunk.js.map",
+    "index.html": "/codes-printer/index.html",
+    "precache-manifest.7b7487f02cb6f5adb4da1813d97ef4e1.js": "/codes-printer/precache-manifest.7b7487f02cb6f5adb4da1813d97ef4e1.js",
+    "service-worker.js": "/codes-printer/service-worker.js",
+    "static/css/main.ac66f545.chunk.css.map": "/codes-printer/static/css/main.ac66f545.chunk.css.map"
+  }
 }

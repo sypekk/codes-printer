@@ -66,6 +66,10 @@ class App extends Component {
     } else {
       newString = text;
     }
+
+    // console.log(zonk);
+    //do poprawy gdy nie ma dodanego wyjątku
+
     const split = newString.split(' ');
     split.forEach(items => {
       const tmp = items.split('\t');

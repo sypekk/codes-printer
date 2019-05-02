@@ -59,13 +59,10 @@ class App extends Component {
     const title = this.state.title;
 
     const exceptions = this.state.exceptions;
-    let newString = '';
-    if (exceptions.length > 0) {
-      const zonk = exceptions.slice(0, exceptions.length - 1);
-      newString = text.replace(new RegExp(exceptions, 'gi'), `${zonk}ZONKZONKZONK`);
-    } else {
-      newString = text;
-    }
+    const zonk = exceptions.slice(0, exceptions.length - 1);
+    // console.log(zonk);
+    //do poprawy gdy nie ma dodanego wyjątku!
+    const newString = text.replace(new RegExp(exceptions, 'gi'), `${zonk}ZONKZONKZONK`);
     const split = newString.split(' ');
     split.forEach(items => {
       const tmp = items.split('\t');

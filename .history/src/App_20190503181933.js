@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// import './App.css';
 import Inputer from './components/Inputer/Inputer';
 import styled, {createGlobalStyle} from 'styled-components';
 import Table from './components/Table/Table';

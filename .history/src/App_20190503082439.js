@@ -1,26 +1,47 @@
 import React, { Component } from 'react';
-import Inputer from './components/Inputer/Inputer';
-import styled, {createGlobalStyle} from 'styled-components';
-import Table from './components/Table/Table';
+import './App.css';
+import Inputer from './Inputer';
+import styled from 'styled-components';
 
-const GlobalStyle = createGlobalStyle`
-    body{
-      @import url('https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text');
-      
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-`;
 
 
 const Containter = styled('div')`
     display: grid;
     grid-template-columns: repeat(${(props) => props.number}, 1fr);
     grid-template-rows: repeat(auto - fill, 1fr);
-`;
+`
+
+const Name = (props) => (
+  <div className='name'>{props.title}</div>
+)
+
+
+const Serial = (props) => {
+  const serial = props.serial.replace('ZONKZONKZONK', ' ');
+  return (
+    <div className='code'>{`*${serial}*`}</div>
+  )
+}
+
+const Items = (props) => {
+  return (
+    <>
+      {props.list.map(items => (
+        <>
+          <Name key={items.item} title={items.title} />
+          {items.serials.map(item => (
+            <Serial key={item} serial={item} />
+          )
+          )}
+        </>
+      )
+      )}
+    </>
+  )
+}
 
 class App extends Component {
+
   state = ({
     text: '',
     list: [],
@@ -29,6 +50,8 @@ class App extends Component {
     columns: 3,
     exceptions: '',
   })
+
+
 
   handleButtonAdd = () => {
     const text = this.state.text;
@@ -42,7 +65,6 @@ class App extends Component {
     } else {
       newString = text;
     }
-
     const split = newString.split(' ');
     split.forEach(items => {
       const tmp = items.split('\t');
@@ -73,9 +95,9 @@ class App extends Component {
   }
 
   render() {
+
     return (
-      <>
-        <GlobalStyle/>
+      <React.Fragment>
         {!this.state.off ? <Inputer
           {...this.state}
           changeFn={this.handleChange}
@@ -83,9 +105,9 @@ class App extends Component {
           addFn={this.handleButtonAdd}
         /> : null}
         <Containter number={this.state.columns}>
-          {this.state.list.length > 0 && <Table list={this.state.list} />}
+          {this.state.list.length > 0 && <Items list={this.state.list} />}
         </Containter>
-      </>
+      </React.Fragment >
     );
   }
 }

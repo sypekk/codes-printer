@@ -10,7 +10,7 @@ const Inputer = ({ changeFn, hideFn, addFn, exceptions, text, title, columns, ..
   <div disabled={props.off ? true : false} className="App">
     <input placeholder='Wpisz nazwę sprzetu' name='title' onChange={changeFn} value={title} />
     <input placeholder='Wklej numery seryjne' name='text' type="text" onChange={changeFn} value={text} />
-    <input placeholder='Dodaj wyjątek' name='exceptions' onChange={changeFn} value={exceptions} />
+    <input placeholder='Dodaj wyjątek    (min 2 znaki)' name='exceptions' onChange={changeFn} value={exceptions} />
     <button onClick={addFn}>Dodaj</button>
     <button onClick={hideFn}>Ukryj</button>
     <label>

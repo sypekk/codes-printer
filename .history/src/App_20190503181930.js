@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// import './App.css';
 import Inputer from './components/Inputer/Inputer';
 import styled, {createGlobalStyle} from 'styled-components';
 import Table from './components/Table/Table';
@@ -6,7 +7,6 @@ import Table from './components/Table/Table';
 const GlobalStyle = createGlobalStyle`
     body{
       @import url('https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text');
-      
       margin: 0;
       padding: 0;
       box-sizing: border-box;

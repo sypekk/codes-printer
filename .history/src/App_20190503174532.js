@@ -1,24 +1,15 @@
 import React, { Component } from 'react';
+import './App.css';
 import Inputer from './components/Inputer/Inputer';
-import styled, {createGlobalStyle} from 'styled-components';
+import styled from 'styled-components';
 import Table from './components/Table/Table';
-
-const GlobalStyle = createGlobalStyle`
-    body{
-      @import url('https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text');
-      
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-`;
 
 
 const Containter = styled('div')`
     display: grid;
     grid-template-columns: repeat(${(props) => props.number}, 1fr);
     grid-template-rows: repeat(auto - fill, 1fr);
-`;
+`
 
 class App extends Component {
   state = ({
@@ -75,13 +66,12 @@ class App extends Component {
   render() {
     return (
       <>
-        <GlobalStyle/>
-        {!this.state.off ? <Inputer
+        {!this.state.off & <Inputer
           {...this.state}
           changeFn={this.handleChange}
           hideFn={this.handleButtonHide}
           addFn={this.handleButtonAdd}
-        /> : null}
+        />}
         <Containter number={this.state.columns}>
           {this.state.list.length > 0 && <Table list={this.state.list} />}
         </Containter>

@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import Inputer from './components/Inputer/Inputer';
-import styled, { createGlobalStyle } from 'styled-components';
+import styled, {createGlobalStyle} from 'styled-components';
 import Table from './components/Table/Table';
 
 const GlobalStyle = createGlobalStyle`
 
-    @import url('https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text');
-    *{
+@import url('https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text');
+    body{
+      @import url('https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text');
+
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -75,7 +77,7 @@ class App extends Component {
   render() {
     return (
       <>
-        <GlobalStyle />
+        <GlobalStyle/>
         {!this.state.off ? <Inputer
           {...this.state}
           changeFn={this.handleChange}

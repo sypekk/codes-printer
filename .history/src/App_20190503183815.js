@@ -6,7 +6,9 @@ import Table from './components/Table/Table';
 const GlobalStyle = createGlobalStyle`
 
     @import url('https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text');
-    *{
+    body{
+      @import url('https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text');
+
       margin: 0;
       padding: 0;
       box-sizing: border-box;

@@ -13,6 +13,7 @@ const GlobalStyle = createGlobalStyle`
     }
 `;
 
+
 const Containter = styled('div')`
     display: grid;
     grid-template-columns: repeat(${(props) => props.number}, 1fr);
@@ -21,7 +22,7 @@ const Containter = styled('div')`
 
 let i = 0;
 
-class App extends Component {
+class App extends Component {  
   state = ({
     text: '',
     list: [],
@@ -31,6 +32,7 @@ class App extends Component {
     exceptions: '',
   })
 
+  // i = 0;
   handleButtonAdd = () => {
     const text = this.state.text;
     const title = this.state.title;

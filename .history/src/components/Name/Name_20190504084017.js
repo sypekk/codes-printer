@@ -11,7 +11,8 @@ const StyledName = styled.div`
 `;
 
 const Name = (props) => (
-  <StyledName>{`${props.index}. ${props.title}`}</StyledName>
+  <StyledName>`${props.index}. ${props.title}`</StyledName>
 )
+
 
 export default Name;

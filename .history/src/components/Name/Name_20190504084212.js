@@ -14,4 +14,5 @@ const Name = (props) => (
   <StyledName>{`${props.index}. ${props.title}`}</StyledName>
 )
 
+
 export default Name;

@@ -85,9 +85,9 @@ class App extends Component {
           hideFn={this.handleButtonHide}
           addFn={this.handleButtonAdd}
         /> : null}
-        <Containter number={this.state.columns}>
-          {this.state.list.length > 0 && <Table list={this.state.list} />}
-        </Containter>
+        <div>
+          {this.state.list.length > 0 && <Table list={this.state.list} columns={this.state.columns}/>}
+        </div>
       </>
     );
   }

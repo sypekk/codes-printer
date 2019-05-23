@@ -13,12 +13,6 @@ const GlobalStyle = createGlobalStyle`
     }
 `;
 
-const Containter = styled('div')`
-    display: grid;
-    grid-template-columns: repeat(${(props) => props.number}, 1fr);
-    grid-template-rows: repeat(auto - fill, 1fr);
-`;
-
 let i = 0;
 
 class App extends Component {
@@ -86,7 +80,7 @@ class App extends Component {
           addFn={this.handleButtonAdd}
         /> : null}
         <div>
-          {this.state.list.length > 0 && <Table list={this.state.list} columns={this.state.columns}/>}
+          {this.state.list.length > 0 && <Table list={this.state.list} columns={this.state.columns} />}
         </div>
       </>
     );

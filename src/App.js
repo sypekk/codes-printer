@@ -13,6 +13,7 @@ const GlobalStyle = createGlobalStyle`
     }
 `;
 
+
 let i = 0;
 
 class App extends Component {
@@ -79,9 +80,9 @@ class App extends Component {
           hideFn={this.handleButtonHide}
           addFn={this.handleButtonAdd}
         /> : null}
-        <div>
+        <>
           {this.state.list.length > 0 && <Table list={this.state.list} columns={this.state.columns} />}
-        </div>
+        </>
       </>
     );
   }
